@@ -1,0 +1,139 @@
+.milkTea {
+    &-parent {
+        margin: $fs-48 0;
+    }
+    &-container {
+        padding: 10px;
+    }
+    &-box {
+        overflow: hidden;
+        margin-top: $fs-28;
+
+        width: 20%;
+        margin: 0 auto; // Center the box horizontally
+        &_image {
+            position: relative;
+            margin: $fs-8;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            @media (max-width: 767px) {
+                height: 200px;
+            }
+            img {
+                transition: transform 0.5s ease;
+                display: block;
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                object-fit: cover;
+            }
+            p {
+                @include posAbsolute("tr", 0, 5px);
+                border-radius: $fs-8;
+                background-color: $secondary-color;
+                color: $black-color;
+                padding: 0px 8px;
+                font-size: $fs-16;
+                animation: colorChange 2s infinite;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &_title {
+            text-align: center;
+            margin: $fs-16 0 $fs-8;
+            @media screen {
+                margin: $fs-12 0 $fs-6;
+                h2 {
+                    font-size: $fs-16 !important;
+                    line-height: 1.2; // added for better readability
+                }
+            }
+            h2 {
+                font-size: $fs-20;
+                margin-bottom: 0;
+            }
+        }
+        &_price {
+            @include flexBox(center);
+            h3 {
+                font-size: $fs-14;
+            }
+            h4 {
+                font-size: $fs-14;
+                margin-left: $fs-12;
+            }
+        }
+        &_button-1 {
+            display: flex;
+            width: 80%;
+            margin: $fs-20 auto;
+            justify-content: center;
+            background-color: $primary-color;
+            color: $white-color;
+            border-radius: $fs-8;
+            padding: 5px 10px;
+            font-weight: 400;
+            font-size: $fs-16;
+            transition: 0.5s;
+            &:hover {
+                color: $black-color;
+                background-color: $secondary-color;
+            }
+            @media (max-width: 991px) {
+                width: 50%;
+                font-size: $fs-14;
+            }
+            &.secondary {
+                background-color: transparent;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                border-radius: $fs-12;
+                transition: 0.5s;
+                &:hover {
+                    color: $black-color;
+                    border: 1px solid $secondary-color;
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+// Additional responsive adjustments for smaller screens
+
+@keyframes colorChange {
+    0% {
+        background-color: $secondary-color;
+    }
+    50% {
+        background-color: lighten($primary-color, 10%);
+        color: $white-color;
+    }
+    100% {
+        background-color: $secondary-color;
+    }
+}
+
+.slick-arrow {
+    top: 40%;
+    right: 0px;
+    &::before {
+        opacity: 1 !important;
+        color: $primary-color !important;
+    }
+}
+
+.slick-prev {
+    top: 40%;
+    left: 0px;
+    &::before {
+        opacity: 1 !important;
+        color: $primary-color !important;
+    }
+}

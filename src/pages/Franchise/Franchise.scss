@@ -1,0 +1,44 @@
+.franchise {
+    h3 {
+        text-align: center;
+        font-size: $fs-24;
+        margin-top: $fs-20;
+        padding-top: $fs-32;
+    }
+    &-dominance {
+        padding-bottom: $fs-32;
+        text-align: center;
+        background-color: $secondary-color;
+        &_child {
+            h4 {
+                width: 30%;
+                padding: $fs-28;
+                margin: $fs-20 auto;
+                color: $white-color;
+                background-color: $primary-color;
+                font-size: $fs-36;
+                clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+            }
+        }
+    }
+    &-conditions {
+        border: 1px solid $primary-color;
+        margin: 30px;
+        border-radius: 30px;
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+        &_menu {
+            margin-top: $fs-40;
+            li {
+                margin-bottom: $fs-24;
+                font-size: $fs-20;
+                i {
+                    margin-right: $fs-8;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

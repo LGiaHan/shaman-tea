@@ -1,0 +1,59 @@
+.banner {
+    position: relative;
+    &-item {
+        background: linear-gradient(to right, #892e2f 17%, #6a1b1f 80%, #6a1b1f 100%);
+        width: 100%;
+        height: 80vh;
+        padding: $fs-48 0;
+        @media (max-width: 575px) {
+            height: 25vh !important;
+        }
+    }
+    &-content_banner {
+        width: 60%;
+        @include posAbsolute("tl", 20px, 0);
+        @media (max-width: 991px) {
+            @include posAbsolute("tl", 50%, 53%);
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+    &-content_image {
+        width: 70%;
+        transform: translateX(30%);
+        position: relative;
+        &_elip {
+            width: 100%;
+            @include posAbsolute("tl", 20px, 10px);
+            z-index: -1;
+            border: 1px solid $secondary-color;
+            padding: $fs-48;
+            border-radius: 100%;
+        }
+        &_icon {
+            width: 28%;
+            @include posAbsolute("tr", -12px, 5%);
+            transform: rotate(18deg);
+            z-index: -1;
+        }
+        &_icon2 {
+            width: 18%;
+            @include posAbsolute("br", 20px, 5%);
+            transform: rotate(114deg);
+            z-index: -1;
+        }
+        &_icon3 {
+            width: 12%;
+            @include posAbsolute("tl", 120px, 0);
+            transform: rotate(-79deg);
+            z-index: -1;
+        }
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+}
+.slick-arrow,
+.slick-next {
+    display: none;
+}

@@ -1,0 +1,38 @@
+.manageRe {
+    width: 90%;
+    margin: 0 auto;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        margin-top: $fs-20;
+        th {
+            padding: 12px 15px;
+            text-align: left;
+            background-color: #f4f4f4;
+            border-bottom: 2px solid #ddd;
+            border-right: 1px solid #ddd;
+            color: #555;
+            width: 14%;
+        }
+
+        td {
+            border-right: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr {
+            border-right: 1px solid #ddd;
+            &:hover {
+                background-color: #f9f9f9;
+            }
+
+            img {
+                border-radius: 4px;
+            }
+        }
+    }
+}
